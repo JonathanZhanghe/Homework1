@@ -1,0 +1,14 @@
+from numpy import array
+from math import sqrt
+d1=array([3,-4,2],float)
+d2=array([2,1,-1.5],float)
+def magnitude(n):
+	return sqrt(n[0]**2+n[1]**2+n[2]**2)
+	
+print "The magnitude of d1 is %f" %(magnitude(d1))
+print "The magnitude of d2 is %f" %(magnitude(d2))
+
+
+from numpy import dot
+dot_product=dot(d1,d2)
+print 'the dot product of d1 and d2 is %f' %(dot_product)
