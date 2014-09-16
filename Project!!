@@ -1,0 +1,54 @@
+def Jonathan_is_great():#def a function
+    import random # import random to the game to make computer makes its move
+    computermove=random.choice("rock","paper","scissors","lizard","Spock") #let computer makes its own move
+    Yourmove=input("rock-paper-scissors-lizard-Spock  please type your move: ") #this collect your move to the computer
+    print computermove
+    if Yourmove=='rock': # these is all the cases yourmove is rock
+        if computermove=="lizard" or computermove=="scissors": #the losing condition of computer
+            print "Nice!! You rock!! You are the winner!!"#print out the result
+        elif computermove=="Spock" or computermove=="paper":# the winning condition of computer
+            print "No,no,no, you lost!!" #print out the result
+        else:
+            print "this is a even game...there is no winnder" #if no one win
+    elif Yourmove=='paper': # these is all the cases yourmove is paper
+        if computermove=="rock" or computermove=="Spock": #the losing condition of computer
+            print "This is a good paper, you smother the computer "#print out the result
+        elif computermove=="scissors" or computermove=="lizard":# the winning condition of computer
+            print "they ripped your paper" #print out the result
+        else:
+            print "nice try...there is no winnder" #if no one win
+    elif Yourmove=='scissors': # these is all the cases yourmove is scissors
+            if computermove=="paper" or computermove=="lizard": #the losing condition of computer
+                print "Sharp scissor!!!! You cut the computer into pieces"#print out the result
+            elif computermove=="rock" or computermove=="Spock":# the winning condition of computer
+                print "the powerful computer crushes your scissor!! Loser!" #print out the result
+            else:
+                print "you are both good!! draw!!" #if no one win
+    elif Yourmove=='lizard': # these is all the cases yourmove is 
+        if computermove=="paper" or computermove=="Spock": #the losing condition of computer
+            print "You Viper!!! You killed the computer cruelly"#print out the result
+        elif computermove=="rock" or computermove=="scissors":# the winning condition of computer
+            print "you died in cold...the computer eat you up" #print out the result
+        else:
+            print "Draw!!!You are lucky for you are still alive,lizard" #if no one win
+    elif Yourmove=='Spock': # these is all the cases yourmove is 
+        if computermove=="rock" or computermove=="scissors": #the losing condition of computer
+            print "clever Spock!!You beat computer using your wisdom"#print out the result
+        elif computermove=="paper" or computermove=="lizard":# the winning condition of computer
+            print "As a loser, you bloody died" #print out the result
+        else:
+            print "Draw!!!" #if no one win
+    else:
+        print "you type a wrong thing,type again!!"
+        Jonathan_is_great()
+    again=input('Do you want to play again? yes or no: ')
+    if again=="yes":
+        Jonathan_is_great()
+        return True
+    else:
+        return True
+
+
+
+
+Jonathan_is_great()
