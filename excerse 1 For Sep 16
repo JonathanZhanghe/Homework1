@@ -1,0 +1,17 @@
+import numpy
+import pylab as pl
+x=numpy.linspace(0,10,num=100)
+y=x**3-2*x-6
+pl.plot(x,y)
+pl.xlim(0,10)
+pl.show()
+
+data=numpy.loadtxt('stars.txt')
+xx=data[:,1]
+yy=data[:,2]
+pl.scatter(xx,yy)
+pl.show()
+
+datadate=numpy.loadtxt('circular.txt')
+# I am not sure about this one
+pl.imshow(datadata,cmap='jet',extent=np.array(xyrange).flatten(), interpolation='none')
